@@ -341,3 +341,10 @@ summary {
 [hidden] {
   display: none;
 }
+
+p {
+  text-rendering: geometricPrecision;
+  font-family: "Noto Serif", serif;
+  hyphens: auto;
+  font-size: 18px;
+}

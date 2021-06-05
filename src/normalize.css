@@ -352,6 +352,7 @@ img {
   width: 100%;
 }
 
+/* Header CSS */
 .site-header {
   width: 100%;
   position: fixed;
@@ -371,12 +372,30 @@ img {
   line-height: 44px;
   cursor: pointer;
 }
+.site-header a {
+  margin: 10px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  color: #222;
+}
 .site-header nav {
   display: flex;
   align-items: center;
 }
-.site-header nav a {
-  margin: 10px;
+
+/* Tags page */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+}
+
+.tags a {
+  display: block;
+  background-color: bisque;
+  margin: 5px 10px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  min-width: max-content;
   text-decoration: none;
-  letter-spacing: 0.5px;
 }

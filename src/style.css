@@ -240,11 +240,22 @@ a:focus {
 }
 
 /* Custom classes */
+.global-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+footer {
+  height: 60px;
+}
+main {
+  flex-grow: 1;
+}
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  padding: var(--spacing-16) var(--spacing-5);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {

@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const tagPost = path.resolve(`./src/templates/tag-post.js`)
+  const allTags = path.resolve(`./src/pages/tags.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(`
@@ -48,13 +49,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const slug = slugify(post.frontmatter.title)
       const tags = post.frontmatter.tag.split(",")
       tagList = [...new Set([...tagList, ...tags])]
-      // tagList.forEach((tag,i) => {
-
-      //   createPage({
-      //     path : slugify(tag),
-
-      //   })
-      // })
+      createPage({
+        path: "tags",
+        component: allTags,
+        context: {
+          tags: tagList,
+        },
+      })
 
       console.log(post.frontmatter.tag.split(","))
       console.log("hello world 1 hehe")

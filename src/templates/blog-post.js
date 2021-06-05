@@ -17,12 +17,8 @@ const BlogPost = ({ location, pageContext, data }) => {
         dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         itemProp="articleBody"
       />
-      {nextPostSlug && (
-        <Link to={nextPostSlug}>
-          <h1>Next post</h1>{" "}
-        </Link>
-      )}
-      {previousPostSlug && <Link to={previousPostSlug}>Previous post </Link>}
+      {nextPostSlug && <Link to={nextPostSlug}>Bài viết sau</Link>}
+      {previousPostSlug && <Link to={previousPostSlug}>Bài viết trước</Link>}
     </Layout>
   )
 }

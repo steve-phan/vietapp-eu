@@ -4,10 +4,12 @@ import React from "react"
 const Header = () => {
   return (
     <div className="site-header">
-      <div className="logo">VietApp</div>
+      <div className="logo">
+        <Link to="/">VietApp</Link>{" "}
+      </div>
       <nav>
         <Link to="/contact">Liên hệ </Link>
-        <Link to="/tag">Các chủ đề</Link>
+        <Link to="/tags">Các chủ đề</Link>
       </nav>
     </div>
   )

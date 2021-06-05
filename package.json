@@ -30,6 +30,7 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
+    "nodemon": "^2.0.7",
     "prettier": "2.2.1"
   },
   "homepage": "https://vietapp.eu",

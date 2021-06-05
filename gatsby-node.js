@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const tagPost = path.resolve(`./src/templates/tag-post.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(`
@@ -15,12 +16,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id
           frontmatter {
             title
+            tag
           }
         }
       }
     }
   `)
-
+  console.log(result)
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
@@ -34,7 +36,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
-
+  let tagList = []
   if (posts.length > 0) {
     posts.forEach((post, index) => {
       const previousPostSlug =
@@ -44,7 +46,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           ? null
           : `/${slugify(posts[index + 1].frontmatter.title)}/`
       const slug = slugify(post.frontmatter.title)
+      const tags = post.frontmatter.tag.split(",")
+      tagList = [...new Set([...tagList, ...tags])]
+      // tagList.forEach((tag,i) => {
 
+      //   createPage({
+      //     path : slugify(tag),
+
+      //   })
+      // })
+
+      console.log(post.frontmatter.tag.split(","))
+      console.log("hello world 1 hehe")
       createPage({
         path: slug,
         component: blogPost,
@@ -52,6 +65,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.id,
           previousPostSlug,
           nextPostSlug,
+        },
+      })
+    })
+    tagList.forEach((tag, index) => {
+      console.log(slugify(tag.trim()))
+      const tagRegex = `/${tag}/`
+      createPage({
+        path: slugify(tag.trim()),
+        component: tagPost,
+        context: {
+          // Pass a tag name to get posts  by tag name
+          tag,
+          tagRegex,
         },
       })
     })

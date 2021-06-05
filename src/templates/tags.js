@@ -7,7 +7,7 @@ import slugify from "../utils/slugify"
 
 const TagsPage = ({ data, location, pageContext }) => {
   const { tags } = pageContext
-
+  console.log(tags)
   return (
     <Layout location={location}>
       <Seo title="404: Not Found" />

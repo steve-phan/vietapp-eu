@@ -48,14 +48,24 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           : `/${slugify(posts[index + 1].frontmatter.title)}/`
       const slug = slugify(post.frontmatter.title)
       const tags = post.frontmatter.tag.split(",")
-      tagList = [...new Set([...tagList, ...tags])]
-      createPage({
-        path: "tags",
-        component: allTags,
-        context: {
-          tags: tagList,
-        },
+      tags.forEach(tag => {
+        if (tagList.map(item => item.name).includes(tag.trim())) {
+          tagList = tagList.map(item =>
+            item.name === tag.trim() ? { ...item, count: item.count + 1 } : item
+          )
+        } else {
+          tagList.push({ name: tag.trim(), count: 1 })
+        }
+        // tagList = tagList.map(item =>
+        //   item.name === tag.trim()
+        //     ? { ...item, count: item.count + 1 }
+        //     : {
+        //         name: tag.trim(),
+        //         count: 1,
+        //       }
+        // )
       })
+      // tagList = [...new Set([...tagList, ...tags])]
 
       console.log(post.frontmatter.tag.split(","))
       console.log("hello world 1 hehe")
@@ -69,11 +79,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
+    console.log(tagList)
+    createPage({
+      path: "tags",
+      component: allTags,
+      context: {
+        tags: tagList,
+      },
+    })
     tagList.forEach((tag, index) => {
-      console.log(slugify(tag.trim()))
-      const tagRegex = `/${tag}/`
+      console.log(slugify(tag.name.trim()))
+      const tagRegex = `/${tag.name}/`
       createPage({
-        path: slugify(tag.trim()),
+        path: slugify(tag.name.trim()),
         component: tagPost,
         context: {
           // Pass a tag name to get posts  by tag name

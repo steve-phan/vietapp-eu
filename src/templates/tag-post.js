@@ -11,7 +11,7 @@ const TagPosts = ({ location, pageContext, data }) => {
   return (
     <Layout location={location} className="wrap-post">
       <Seo
-        title={tag}
+        title={tag.name}
         // description={post.frontmatter.description || post.excerpt}
       />
       {tags.nodes.map((tag, index) => {
@@ -44,20 +44,7 @@ const TagPosts = ({ location, pageContext, data }) => {
             </article>
           </li>
         )
-
-        // <li key={index}>{tag.frontmatter.description}</li>
       })}
-
-      {/* <section
-        dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        itemProp="articleBody"
-      />
-      {nextPostSlug && (
-        <Link to={nextPostSlug}>
-          <h1>Next post</h1>{" "}
-        </Link>
-      )}
-      {previousPostSlug && <Link to={previousPostSlug}>Previous post </Link>} */}
     </Layout>
   )
 }

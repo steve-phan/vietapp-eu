@@ -5,7 +5,7 @@ description: "Euro 2021 đang đến gần, chúng ta chuẩn bị có những b
 tag: "Thể thao, tin tức, cuộc sống Đức"
 ---
 
-![Euro2021](./euro2021.jpg)
+![Euro2021](/euro2021.jpg)
 
 Do dịch bệnh Covid-19, vòng chung kết giải bóng đá EURO 2021 tại 12 quốc gia châu Âu sẽ chính thức diễn ra vào 12/6/2021.Hầu hết các trận đấu sẽ được miễn phí trên `ARD` hoặc `ZDF.`
 

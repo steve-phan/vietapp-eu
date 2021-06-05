@@ -399,3 +399,25 @@ img {
   min-width: max-content;
   text-decoration: none;
 }
+.language-text {
+  color: deeppink !important;
+  background-color: #f5f2f0 !important;
+}
+
+/* Tag count */
+.tag-count {
+  padding: 0 4px;
+  color: red;
+}
+
+/* post-navigation */
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.post-navigation .next {
+  margin-left: auto;
+}
+.post-navigation .prev {
+  margin-right: auto;
+}

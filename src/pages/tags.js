@@ -8,14 +8,16 @@ import slugify from "../utils/slugify"
 const NotFoundPage = ({ data, location, pageContext }) => {
   console.log(pageContext)
   const { tags } = pageContext
+  console.log(tags)
   return (
     <Layout location={location}>
       <Seo title="404: Not Found" />
       <div className="tags">
         {tags.map((tag, index) => {
           return (
-            <Link to={`/${slugify(tag.trim())}`} key={index}>
-              {tag.trim()}
+            <Link to={`/${slugify(tag.name.trim())}`} key={index}>
+              {tag.name.trim()}
+              <span className="tag-count">({tag.count}) </span>
             </Link>
           )
         })}

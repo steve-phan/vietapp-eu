@@ -6,6 +6,9 @@ import "typeface-merriweather"
 import "./src/normalize.css"
 // custom CSS styles
 import "./src/style.css"
-
-// Highlighting for code blocks
-import "prismjs/themes/prism.css"
+//  coy dark funky okaidia tomorrow twilight
+// Highlighting for code
+// import "prismjs/themes/prism-solarizedlight.css"
+// // import "prismjs/themes/prism.css"
+import "prismjs/themes/prism-okaidia.css"
+// import "gatsby-syntax-highlights-dracula"

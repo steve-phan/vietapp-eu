@@ -3,10 +3,8 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 const BlogPost = ({ location, pageContext, data }) => {
-  console.log(location)
   const { nextPostSlug, previousPostSlug } = pageContext
   const post = data.markdownRemark
-  console.log(data)
   return (
     <Layout location={location} className="wrap-post">
       <Seo

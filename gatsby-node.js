@@ -56,16 +56,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         } else {
           tagList.push({ name: tag.trim(), count: 1 })
         }
-        // tagList = tagList.map(item =>
-        //   item.name === tag.trim()
-        //     ? { ...item, count: item.count + 1 }
-        //     : {
-        //         name: tag.trim(),
-        //         count: 1,
-        //       }
-        // )
       })
-      // tagList = [...new Set([...tagList, ...tags])]
 
       createPage({
         path: slug,
@@ -77,7 +68,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
-
     createPage({
       path: "tags",
       component: allTags,

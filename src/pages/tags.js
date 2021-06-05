@@ -12,7 +12,7 @@ const TagsPage = ({ data, location, pageContext }) => {
     <Layout location={location}>
       <Seo title="404: Not Found" />
       <div className="tags">
-        {tags.map((tag, index) => {
+        {tags?.map((tag, index) => {
           return (
             <Link to={`/${slugify(tag.name.trim())}`} key={index}>
               {tag.name.trim()}

@@ -7,7 +7,7 @@ import slugify from "../utils/slugify"
 const TagPosts = ({ location, pageContext, data }) => {
   const { tag } = pageContext
   const tags = data.allMarkdownRemark
-  console.log(tags)
+
   return (
     <Layout location={location} className="wrap-post">
       <Seo

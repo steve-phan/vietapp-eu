@@ -96,7 +96,7 @@ import slugify from "../utils/slugify"
 
 const IndexPage = ({ data, location }) => {
   const blogPosts = data.allMarkdownRemark.nodes || []
-  console.log(blogPosts)
+
   return (
     <Layout location={location}>
       <SEO title="Home" />

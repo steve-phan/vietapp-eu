@@ -23,7 +23,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   `)
-  console.log(result)
+
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
@@ -67,8 +67,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
       // tagList = [...new Set([...tagList, ...tags])]
 
-      console.log(post.frontmatter.tag.split(","))
-      console.log("hello world 1 hehe")
       createPage({
         path: slug,
         component: blogPost,
@@ -79,7 +77,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
-    console.log(tagList)
+
     createPage({
       path: "tags",
       component: allTags,
@@ -88,7 +86,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
     tagList.forEach((tag, index) => {
-      console.log(slugify(tag.name.trim()))
       const tagRegex = `/${tag.name}/`
       createPage({
         path: slugify(tag.name.trim()),

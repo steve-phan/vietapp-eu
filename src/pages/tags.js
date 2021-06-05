@@ -5,10 +5,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import slugify from "../utils/slugify"
 
-const NotFoundPage = ({ data, location, pageContext }) => {
-  console.log(pageContext)
+const TagsPage = ({ data, location, pageContext }) => {
   const { tags } = pageContext
-  console.log(tags)
+
   return (
     <Layout location={location}>
       <Seo title="404: Not Found" />
@@ -26,7 +25,7 @@ const NotFoundPage = ({ data, location, pageContext }) => {
   )
 }
 
-export default NotFoundPage
+export default TagsPage
 
 // export const pageQuery = graphql`
 //   query {

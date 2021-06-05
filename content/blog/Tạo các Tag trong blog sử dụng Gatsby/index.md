@@ -7,8 +7,8 @@ tag: "Gatsby,Reactjs, tin tức, cuộc sống Đức"
 
 Tạo một `regex` sẵn ở trong `gatsby-node.js` .
 
-![Regex. This is nice place!](/assets/images/mypic.jpg "Philadelphia's Magic Gardens")
+![Regex.](/create-regex.png "Regex need to query")
 
 Sau đó sử dụng nó để filter các bài viết liên quan đế tagname đó
 
-![query variable. This is nice place!](/query.png "Query image")
+![Query variable.](/query.png "Query image")

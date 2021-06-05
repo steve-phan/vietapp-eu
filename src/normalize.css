@@ -351,3 +351,32 @@ p {
 img {
   width: 100%;
 }
+
+.site-header {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 2px 2px #cecece;
+  top: 0;
+  right: 0;
+  z-index: 2021;
+
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.site-header .logo {
+  font-size: 1.4rem;
+  line-height: 44px;
+  cursor: pointer;
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+}
+.site-header nav a {
+  margin: 10px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}

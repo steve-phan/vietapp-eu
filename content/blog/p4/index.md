@@ -5,10 +5,20 @@ description: "Bộ nhớ của Iphone bị quá tải"
 tag: "Tin tức, Iphone, MacBook"
 ---
 
-Tạo một `regex` sẵn ở trong `gatsby-node.js` .
+Bộ nhớ của Iphone luôn là một vấn đề của người dùng. Đôi lúc bạn đã cố gắng xóa ảnh, video hoặc các ứng dụng không cần thiết nhưng bộ nhớ vẫn không còn đáng kể bao nhiêu. Một trong những lý do chính đó là dữ liệu (`cache`) của những App bạn đã sử dụng. Mặc dù các bạn đã xóa App nhưng `cache` vẫn còn đó. Nó nằm ở mục `Other data`
 
-![Regex.](/create-regex.png "Regex need to query")
+#### Xem dung lượng `Other data`
 
-Sau đó sử dụng nó để filter các bài viết liên quan đế tagname đó
+1. `Setting` => `General`
 
-![Query variable.](/query.png "Query image")
+![Setting](/3.png)
+
+2. `Iphone Storage`
+
+![Iphone Storage](/2.png)
+
+3. Kéo xuống dưới cùng `other` đó chính là dung lượng bạn cần giải phóng
+
+![Iphone Storage](/2.png)
+
+Cách triệt để nhất đó là kết nối với PC và backup lại iphone. Sau đó reset lại Iphone. Good luck!

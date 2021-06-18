@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Serif:wght@400;700&display=swap");
+
+/* font-family: 'Abril Fatface', cursive; */
+/* font-family: 'Noto Serif', serif */
 /* CSS Custom Properties Definitions */
 
 :root {
@@ -54,7 +57,7 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #005b99;
-  --color-highlight: #f05123;
+  --color-highlight: #6d62ff;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;

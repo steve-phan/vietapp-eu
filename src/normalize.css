@@ -382,12 +382,14 @@ img {
   margin: 10px;
   text-decoration: none;
   /* letter-spacing: 0.5px; */
-  color: var(--color-primary);
+  color: var(--color-heading);
 }
 .site-header .logo a {
-  letter-spacing: 1.6px;
+  letter-spacing: 2px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--color-highlight);
+  font-family: "Abril Fatface", cursive;
 }
 .site-header nav {
   display: flex;

@@ -1,5 +1,5 @@
 import React from "react"
-import HeroIMg from "../../images/website.png"
+import HeroIMg from "../../images/event.svg"
 import "./hero.css"
 
 const Hero = () => {
@@ -9,6 +9,7 @@ const Hero = () => {
         <h1 className="hero-left__title">
           Booking system for Restaurants or Nails Salons
         </h1>
+        <span></span>
         <button className="hero-button">
           <a href="https://booking.vietapp.eu/nail-vietnam">Demo</a>
         </button>

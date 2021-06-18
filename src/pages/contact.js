@@ -9,7 +9,7 @@ const NotFoundPage = ({ data, location }) => {
     <Layout location={location}>
       <Seo title="Liên hệ với chúng tôi" />
       <h4>Email:</h4>
-      <p style={{ color: "deepskyblue" }}>vietappeu@gmail.com</p>
+      <p className="post-title">vietappeu@gmail.com</p>
     </Layout>
   )
 }

@@ -27,6 +27,7 @@
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
+  --spacing-26: 7rem;
   --spacing-32: 8rem;
   --fontFamily-sans: "Noto Serif", serif;
   --fontFamily-serif: "Noto Serif", serif;
@@ -53,6 +54,7 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #005b99;
+  --color-highlight: #f05123;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -100,7 +102,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  margin-top: var(--spacing-12);
+  margin-top: var(--spacing-8);
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
@@ -252,7 +254,7 @@ main {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-16) var(--spacing-5);
+  padding: var(--spacing-32) var(--spacing-5) var(--spacing-12);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {

@@ -41,12 +41,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (posts.length > 0) {
     posts.forEach((post, index) => {
       const previousPostSlug =
-        index === 0 ? null : `/${slugify(posts[index - 1].frontmatter.title)}/`
+        index === 0 ? null : `${slugify(posts[index - 1].frontmatter.title)}/`
       const nextPostSlug =
         index === posts.length - 1
           ? null
-          : `/${slugify(posts[index + 1].frontmatter.title)}/`
-      const slug = slugify(post.frontmatter.title)
+          : `${slugify(posts[index + 1].frontmatter.title)}/`
+      const slug = `/blog/${slugify(post.frontmatter.title)}`
       const tags = post.frontmatter.tag.split(",")
       tags.forEach(tag => {
         if (tagList.map(item => item.name).includes(tag.trim())) {

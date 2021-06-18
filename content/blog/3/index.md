@@ -1,8 +1,8 @@
 ---
-title: Đếm số lượng bài viết theo tagname
+title: Đếm số lượng bài viết theo chủ đề
 date: "2021-06-06T23:12:03.284Z"
 description: "Thống kê lại xem bài viết về chủ đề nào được viết nhiều nhất"
-tag: "Gatsby, Reactjs, Javascript, TagName"
+tag: "Gatsby, Reactjs, Javascript"
 ---
 
 1. Tạo ra một empty Array, `let tagList = []`

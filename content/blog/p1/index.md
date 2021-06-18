@@ -2,7 +2,7 @@
 title: Xem trực tiếp Euro 2021 ở kênh nào!
 date: "2021-06-05T22:12:03.284Z"
 description: "Euro 2021 đang đến gần, chúng ta chuẩn bị có những bữa tiệc bóng đá tuyệt vời."
-tag: "Thể thao, tin tức, cuộc sống Đức"
+tag: "Thể thao, Tin tức, Cuộc sống Đức"
 ---
 
 ![Euro2021](/euro2021.jpg)

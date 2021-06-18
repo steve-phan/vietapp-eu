@@ -6,6 +6,7 @@ import "typeface-merriweather"
 import "./src/normalize.css"
 // custom CSS styles
 import "./src/style.css"
+import "./src/custom.css"
 //  coy dark funky okaidia tomorrow twilight
 // Highlighting for code
 // import "prismjs/themes/prism-solarizedlight.css"

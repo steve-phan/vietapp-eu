@@ -4,14 +4,17 @@ import "./hero.css"
 
 const Hero = () => {
   return (
-    <div className="container">
+    <div className="container container-hero">
       <div className="hero-left">
         <h1 className="hero-left__title">
           Booking system for Restaurants or Nails Salons
         </h1>
-        <span></span>
+        <p>
+          Vietapp is a powerful platform to promote your business to potential
+          customers.
+        </p>
         <button className="hero-button">
-          <a href="https://booking.vietapp.eu/nail-vietnam">Demo</a>
+          <a href="https://booking.vietapp.eu/nail-vietnam">Free Trial</a>
         </button>
       </div>
       <div className="hero-right">

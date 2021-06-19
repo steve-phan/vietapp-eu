@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Serif:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 /* font-family: 'Abril Fatface', cursive; */
 /* font-family: 'Noto Serif', serif */
 /* CSS Custom Properties Definitions */
@@ -14,8 +13,9 @@
   --maxWidth-2xl: 42rem;
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
+  --maxWidth-6xl: 74rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-4xl);
+  --maxWidth-wrapper: var(--maxWidth-6xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -32,8 +32,8 @@
   --spacing-24: 6rem;
   --spacing-26: 7rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "Noto Serif", serif;
-  --fontFamily-serif: "Noto Serif", serif;
+  --fontFamily-sans: "Poppins", sans-serif;
+  --fontFamily-serif: "Poppins", sans-serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -63,6 +63,7 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --color-background: #e1e8f9;
 }
 
 /* HTML elements */
@@ -344,4 +345,9 @@ main {
   ol {
     list-style-position: inside;
   }
+}
+
+.footer-logo {
+  text-decoration: none;
+  color: var(--color-text);
 }

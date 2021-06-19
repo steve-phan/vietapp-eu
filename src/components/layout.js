@@ -30,7 +30,9 @@ const Layout = ({ location, title, children }) => {
       const element = e.target.firstElementChild
       if (element.scrollTop > 0) {
         siteHeader.style.boxShadow = "0 0 2px 2px #cecece"
+        siteHeader.style.background = "white"
       } else {
+        siteHeader.style.background = "unset"
         siteHeader.style.boxShadow = "unset"
       }
 
@@ -43,9 +45,11 @@ const Layout = ({ location, title, children }) => {
       <Header />
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, Copyright
         {` `}
-        <a href="https://www.vietapp.eu">VietApp</a>
+        <a href="https://www.vietapp.eu" className="footer-logo">
+          VietApp
+        </a>
       </footer>
     </div>
   )

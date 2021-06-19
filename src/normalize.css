@@ -343,8 +343,8 @@ summary {
 }
 
 p {
-  text-rendering: geometricPrecision;
-  font-family: "Noto Serif", serif;
+  /* text-rendering: geometricPrecision; */
+  font-family: var(--fontFamily-sans);
   hyphens: auto;
   font-size: 18px;
 }
@@ -362,7 +362,7 @@ img {
 
   z-index: 2021;
 
-  background-color: white;
+  /* background-color: white; */
 
   padding: 0.5rem;
 }

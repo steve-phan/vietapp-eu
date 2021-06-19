@@ -1,4 +1,5 @@
 // custom typefaces
+import React from "react"
 
 import "typeface-montserrat"
 import "typeface-merriweather"
@@ -13,3 +14,19 @@ import "./src/custom.css"
 // // import "prismjs/themes/prism.css"
 import "prismjs/themes/prism-okaidia.css"
 // import "gatsby-syntax-highlights-dracula"
+
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
+
+const theme = createMuiTheme({
+  highlight: {
+    color: "red",
+  },
+})
+
+export const wrapPageElement = ({ element, props }) => {
+  return (
+    <ThemeProvider {...props} theme={theme}>
+      {element}
+    </ThemeProvider>
+  )
+}

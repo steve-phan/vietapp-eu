@@ -6,6 +6,7 @@ const index = ({ location }) => {
   return (
     <Layout location={location}>
       <Hero />
+      <hr />
     </Layout>
   )
 }

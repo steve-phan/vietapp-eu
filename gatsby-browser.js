@@ -23,10 +23,6 @@ const theme = createMuiTheme({
   },
 })
 
-export const wrapPageElement = ({ element, props }) => {
-  return (
-    <ThemeProvider {...props} theme={theme}>
-      {element}
-    </ThemeProvider>
-  )
+export const wrapPageElement = ({ element }) => {
+  return <ThemeProvider theme={theme}>{element}</ThemeProvider>
 }

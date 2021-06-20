@@ -10,7 +10,7 @@ const TagsPage = ({ data, location, pageContext }) => {
   console.log(tags)
   return (
     <Layout location={location}>
-      <Seo title="404: Not Found" />
+      <Seo title="All Topic" />
       <div className="tags">
         {tags?.map((tag, index) => {
           return (

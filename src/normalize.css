@@ -360,7 +360,7 @@ img {
   top: 0;
   left: 0;
 
-  z-index: 2021;
+  z-index: 2019;
 
   /* background-color: white; */
 
@@ -370,6 +370,7 @@ img {
   max-width: var(--maxWidth-wrapper);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
 }
 .site-header .logo {

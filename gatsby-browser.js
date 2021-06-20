@@ -19,7 +19,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
 
 const theme = createMuiTheme({
   highlight: {
-    color: "red",
+    color: "#e84b63",
   },
 })
 

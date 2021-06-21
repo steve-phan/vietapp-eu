@@ -11,10 +11,16 @@
   left: 0;
   clear: both;
 }
+.container-hero {
+  z-index: 100;
+  height: auto;
+  width: 100%;
+}
 /* Hero section */
 .hero-left {
   /* max-width: 580px; */
-  z-index: 2020;
+  width: 100%;
+  z-index: 10;
   float: left;
   text-align: center;
   margin-bottom: 2.5rem;
@@ -41,7 +47,7 @@
 @media (min-width: 48.1rem) {
   .hero-left {
     max-width: 580px;
-    z-index: 2020;
+    /* z-index: 2020; */
     float: left;
     text-align: left;
     margin-bottom: 2.5rem;
@@ -60,7 +66,7 @@
 
   .hero-right {
     width: 15%;
-    z-index: 2020;
+    /* z-index: 2020; */
     float: right;
   }
   .hero-right img {
@@ -83,4 +89,9 @@
   text-decoration: none;
   color: white;
   letter-spacing: 0.8px;
+}
+.hero-hr {
+  width: 30%;
+  background-color: var(--color-highlight);
+  height: 2px;
 }

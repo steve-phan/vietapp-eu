@@ -147,73 +147,9 @@ const Header = () => {
           </div>
         ) : (
           <nav>
-            <span>
-              <Typography
-                ref={anchorEl}
-                aria-owns="mouse-over-popover"
-                aria-haspopup="true"
-                onMouseEnter={e => {
-                  // setIsBridge(true)
-                  handlePopoverOpen(e)
-                }}
-                className="popoverLink"
-                onMouseLeave={e => {
-                  console.log("isBirdge is, ", isBirdge)
-                  setTimeout(() => {
-                    if (!isBirdge) {
-                      handlePopoverClose(e)
-                    }
-                  }, 300)
-                }}
-              >
-                Solutions
-              </Typography>
-              <Popover
-                id="mouse-over-popover"
-                className={classes.popover}
-                classes={{
-                  paper: classes.popoverContent,
-                }}
-                open={isPopOver}
-                anchorEl={anchorEl.current}
-                anchorOrigin={{
-                  vertical: 20,
-                  horizontal: "center",
-                }}
-                transformOrigin={{
-                  vertical: 20,
-                  horizontal: "center",
-                }}
-                PaperProps={{
-                  onMouseEnter: e => {
-                    console.log("Comming")
-                    setIsBridge(true)
-                    console.log("Content enter isBirdge is, ", isBirdge)
-
-                    // handlePopoverOpen(e)
-                  },
-                  onMouseLeave: handlePopoverClose,
-                }}
-                // onClose={handlePopoverClose}
-                disableRestoreFocus
-              >
-                <div
-                  className="wrapContent"
-                  style={{
-                    padding: "100px 10px",
-                    backgroundColor: "black !important",
-                  }}
-                >
-                  <div className="content-brige"></div>
-                  Solutions content display
-                </div>
-              </Popover>
-            </span>
-            {/* <Link to="/tags">
-
-            </Link> */}
+            <Link to="/tags">Email-Marketing</Link>
+            <Link to="/tags">Booking-Online</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/blog">Prices</Link>
           </nav>
         )}
       </div>

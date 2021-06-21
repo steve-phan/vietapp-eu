@@ -23,6 +23,9 @@ const Hero = () => {
       <div className="hero-right">
         <img src={HeroIMg} alt="" />
       </div>
+      <div style={{ clear: "both" }}>
+        <hr className="hero-hr" />
+      </div>
     </div>
   )
 }

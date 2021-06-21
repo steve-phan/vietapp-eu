@@ -1,10 +1,14 @@
 import { Link } from "gatsby"
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
-import { SwipeableDrawer, useMediaQuery } from "@material-ui/core"
+import {
+  SwipeableDrawer,
+  useMediaQuery,
+  Popover,
+  Typography,
+} from "@material-ui/core"
 
 const useStyles = makeStyles(theme => {
-  console.log(theme)
   return {
     burgerMenu: {
       position: "fixed",
@@ -54,11 +58,38 @@ const useStyles = makeStyles(theme => {
       transform: "translate(-2px, -6px) rotatez(-45deg)",
       transition: "all 0.4s",
     },
+    popover: {
+      pointerEvents: "none",
+    },
+    popoverContent: {
+      pointerEvents: "auto",
+    },
+    paper: {
+      padding: theme.spacing(1),
+    },
   }
 })
 
 const Header = () => {
   const [isShow, setIsShow] = useState({ right: false })
+
+  /**
+   * @Proper Customize
+   * */
+
+  // const [anchorEl, setAnchorEl] = useState(null)
+  const [isPopOver, setIsPopOver] = useState(false)
+  const anchorEl = useRef(null)
+  const handlePopoverOpen = event => {
+    setIsPopOver(true)
+  }
+
+  const handlePopoverClose = () => {
+    setIsPopOver(false)
+  }
+
+  // const open = Boolean(anchorEl)
+
   const classes = useStyles()
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
@@ -114,7 +145,47 @@ const Header = () => {
         ) : (
           <nav>
             <Link to="/contact">Contact</Link>
-            <Link to="/tags">Solutions</Link>
+            <Link to="/tags">
+              <Typography
+                ref={anchorEl}
+                aria-owns="mouse-over-popover"
+                aria-haspopup="true"
+                onMouseEnter={handlePopoverOpen}
+                onMouseLeave={e => {
+                  console.log(e)
+                  handlePopoverClose(e)
+                }}
+              >
+                Solutions
+              </Typography>
+              <Popover
+                id="mouse-over-popover"
+                className={classes.popover}
+                classes={{
+                  paper: classes.popoverContent,
+                }}
+                open={isPopOver}
+                anchorEl={anchorEl.current}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                PaperProps={{
+                  onMouseEnter: handlePopoverOpen,
+                  onMouseLeave: handlePopoverClose,
+                }}
+                // onClose={handlePopoverClose}
+                // disableRestoreFocus
+              >
+                <div style={{ padding: "100px 10px" }}>
+                  Solutions content display
+                </div>
+              </Popover>
+            </Link>
             <Link to="/blog">Prices</Link>
           </nav>
         )}

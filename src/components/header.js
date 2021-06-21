@@ -62,7 +62,12 @@ const useStyles = makeStyles(theme => {
       pointerEvents: "none",
     },
     popoverContent: {
+      backgroundColor: "transparent",
       pointerEvents: "auto",
+      boxShadow: "none",
+      borderRadius: "0",
+      zIndex: 2020,
+      // position: "relative",
     },
     paper: {
       padding: theme.spacing(1),
@@ -79,6 +84,7 @@ const Header = () => {
 
   // const [anchorEl, setAnchorEl] = useState(null)
   const [isPopOver, setIsPopOver] = useState(false)
+  const [isBirdge, setIsBridge] = useState(false)
   const anchorEl = useRef(null)
   const handlePopoverOpen = event => {
     setIsPopOver(true)
@@ -88,12 +94,9 @@ const Header = () => {
     setIsPopOver(false)
   }
 
-  // const open = Boolean(anchorEl)
-
   const classes = useStyles()
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
-  console.log(matches)
   const toggleDrawer = open => event => {
     if (
       event &&
@@ -144,16 +147,23 @@ const Header = () => {
           </div>
         ) : (
           <nav>
-            <Link to="/contact">Contact</Link>
-            <Link to="/tags">
+            <span>
               <Typography
                 ref={anchorEl}
                 aria-owns="mouse-over-popover"
                 aria-haspopup="true"
-                onMouseEnter={handlePopoverOpen}
+                onMouseEnter={e => {
+                  // setIsBridge(true)
+                  handlePopoverOpen(e)
+                }}
+                className="popoverLink"
                 onMouseLeave={e => {
-                  console.log(e)
-                  handlePopoverClose(e)
+                  console.log("isBirdge is, ", isBirdge)
+                  setTimeout(() => {
+                    if (!isBirdge) {
+                      handlePopoverClose(e)
+                    }
+                  }, 300)
                 }}
               >
                 Solutions
@@ -167,25 +177,42 @@ const Header = () => {
                 open={isPopOver}
                 anchorEl={anchorEl.current}
                 anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
+                  vertical: 20,
+                  horizontal: "center",
                 }}
                 transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
+                  vertical: 20,
+                  horizontal: "center",
                 }}
                 PaperProps={{
-                  onMouseEnter: handlePopoverOpen,
+                  onMouseEnter: e => {
+                    console.log("Comming")
+                    setIsBridge(true)
+                    console.log("Content enter isBirdge is, ", isBirdge)
+
+                    // handlePopoverOpen(e)
+                  },
                   onMouseLeave: handlePopoverClose,
                 }}
                 // onClose={handlePopoverClose}
-                // disableRestoreFocus
+                disableRestoreFocus
               >
-                <div style={{ padding: "100px 10px" }}>
+                <div
+                  className="wrapContent"
+                  style={{
+                    padding: "100px 10px",
+                    backgroundColor: "black !important",
+                  }}
+                >
+                  <div className="content-brige"></div>
                   Solutions content display
                 </div>
               </Popover>
-            </Link>
+            </span>
+            {/* <Link to="/tags">
+
+            </Link> */}
+            <Link to="/contact">Contact</Link>
             <Link to="/blog">Prices</Link>
           </nav>
         )}

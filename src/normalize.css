@@ -380,10 +380,12 @@ img {
   cursor: pointer;
 }
 .site-header a {
-  margin: 10px;
+  margin: 0 10px;
+  /* padding: 10px 0; */
+  line-height: 44px;
   text-decoration: none;
   /* letter-spacing: 0.5px; */
-  color: var(--color-heading);
+  color: var(--color-primary);
 }
 .site-header .logo a {
   letter-spacing: 2px;

@@ -244,6 +244,10 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
+/* List */
+li {
+  list-style: none;
+}
 
 /* Custom classes */
 .global-wrapper {
@@ -254,6 +258,10 @@ a:focus {
 
 footer {
   height: 60px;
+  text-align: center;
+}
+footer a {
+  text-align: center;
 }
 main {
   flex-grow: 1;
@@ -261,7 +269,7 @@ main {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-32) var(--spacing-5) var(--spacing-12);
+  padding: var(--spacing-32) var(--spacing-5) var(--spacing-6);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {

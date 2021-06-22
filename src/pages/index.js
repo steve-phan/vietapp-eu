@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 import Hero from "../components/Hero"
-import WhyEmail from "../components/WhyEmail"
+import WhyBooking from "../components/WhyBooking"
 
 const index = ({ location }) => {
   return (
     <Layout location={location}>
       <Hero />
-      <WhyEmail />
+      <WhyBooking />
     </Layout>
   )
 }

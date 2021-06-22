@@ -393,6 +393,7 @@ img {
   font-weight: 700;
   color: var(--color-highlight);
   font-family: "Abril Fatface", cursive;
+  text-shadow: -2px -1px goldenrod;
 }
 .site-header nav {
   display: flex;

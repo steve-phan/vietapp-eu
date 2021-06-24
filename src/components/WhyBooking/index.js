@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: 26,
   },
   icons: {
-    fill: theme.highlight.color,
+    fill: theme?.highlight?.color,
     fontSize: 36,
     marginRight: 5,
     // marginTop: 10,
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 500,
     margin: "0 auto",
 
-    [theme.breakpoints.down("xs")]: {
+    [theme?.breakpoints?.down("xs")]: {
       marginTop: 10,
     },
   },

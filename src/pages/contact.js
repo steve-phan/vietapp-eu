@@ -9,8 +9,8 @@ const useStyles = makeStyles(theme => {
   console.log(theme)
   return {
     root: {
-      color: theme.highlight.color,
-      boxShadow: theme.shadows[10],
+      color: theme?.highlight?.color,
+      boxShadow: theme?.shadows[10],
     },
   }
 })

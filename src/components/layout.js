@@ -1,5 +1,5 @@
-import React, { useEffect } from "react"
 import { Link } from "gatsby"
+import React, { useEffect } from "react"
 import Header from "./header"
 
 const Layout = ({ location, title, children }) => {

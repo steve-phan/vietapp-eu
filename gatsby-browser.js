@@ -17,12 +17,8 @@ import "prismjs/themes/prism-okaidia.css"
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
 
-const theme = createMuiTheme({
-  highlight: {
-    color: "#e84b63",
-  },
-})
+import theme from "./src/theme"
 
-export const wrapPageElement = ({ element }) => {
+export const wrapRootElement = ({ element }) => {
   return <ThemeProvider theme={theme}>{element}</ThemeProvider>
 }

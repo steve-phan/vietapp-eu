@@ -25,6 +25,7 @@ module.exports = {
       options: {
         disableAutoprefixing: false,
         disableMinification: false,
+        pathToTheme: "src/theme.js",
       },
     },
     {

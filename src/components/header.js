@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => {
         width: 24,
         height: 2,
         margin: 5,
-        backgroundColor: theme.highlight.color,
+        backgroundColor: theme?.highlight?.color || "#fff",
       },
     },
     burgerLink: {
@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => {
       // position: "relative",
     },
     paper: {
-      padding: theme.spacing(1),
+      padding: theme?.spacing(1),
     },
   }
 })

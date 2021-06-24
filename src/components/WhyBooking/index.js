@@ -9,10 +9,32 @@ const useStyles = makeStyles(theme => ({
   root: {
     marginTop: 60,
   },
+  reasonTitle: {
+    display: "flex",
+    justifyContent: "center",
+    height: 36,
+    lineHeight: "36px",
+    fontSize: 28,
+    fontWeight: 300,
+    textAlign: "center",
+    marginTop: 26,
+  },
   icons: {
     fill: theme.highlight.color,
     fontSize: 36,
+    marginRight: 5,
     // marginTop: 10,
+  },
+  content: {
+    fontSize: "18px",
+    padding: 20,
+    width: "100%",
+    maxWidth: 500,
+    margin: "0 auto",
+
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 10,
+    },
   },
 }))
 
@@ -23,24 +45,44 @@ const WhyEmail = () => {
     <Grid container className={classes.root} spacing={2}>
       <Grid item sm={12} md={6}>
         <Card>
-          <Typography gutterBottom variant="h5" component="h2">
-            <AlarmAdd className={classes.icons} /> Lizard
+          <Typography className={classes.reasonTitle}>
+            <AlarmAdd className={classes.icons} /> Tiết kiệm thời gian
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography
+            className={classes.content}
+            variant="body2"
+            color="textSecondary"
+            component="p"
+          >
+            Ngày nay việc đặt lịch cho các công sở, bác sỹ, luật sư, ... đã trở
+            nên qúa phổ biến. Đặt lich Online tiết kiệm được nhân lực cho việc
+            nghe điện thoại, tiếp nhận thông tin, kiểm tra các lịch hẹn còn
+            trống,... điều này dẫn đến việc không thoải mái cho khách hàng phải
+            chờ đợi. Thậm chí người quản lý và nhân viên cũng thuận tiện hơn
+            trong việc kiểm tra lịch hẹn và công việc của minh nhanh hơn, khoa
+            học và tiết kiệm thời gian hơn.
           </Typography>
         </Card>
       </Grid>
       <Grid item sm={12} md={6}>
         <Card>
-          <Typography gutterBottom variant="h4" component="h2">
+          <Typography className={classes.reasonTitle}>
             <ThumbUp className={classes.icons} />
-            Lizard
+            Sự chuyên nghiệp
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography
+            className={classes.content}
+            variant="body2"
+            color="textSecondary"
+            component="p"
+          >
+            Lên lịch cuộc hẹn trực tuyến mang đến cho khách hàng nhiều tự do
+            hơn. Họ có thể xem lại thời gian sẵn có khi rảnh rỗi, đặt trước bất
+            kỳ giờ nào trong ngày và dễ dàng lên lịch lại khi mâu thuẫn phát
+            sinh — tất cả đều không cần phải gọi điện. Khách hàng, nhân viên và
+            người quản lý dễ dàng thêm lịch hẹn vào lịch cá nhân của từng người
+            dễ dàng. Và chúng ta có thể nhận được những thông báo khi các lịch
+            hẹn này chuẩn bị đến.
           </Typography>
         </Card>
       </Grid>

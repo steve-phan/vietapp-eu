@@ -11,14 +11,14 @@ Bộ nhớ của Iphone luôn là một vấn đề của người dùng. Đôi 
 
 1. `Setting` => `General`
 
-![Setting](/3.png)
+![Setting](./3.png)
 
 2. `Iphone Storage`
 
-![Iphone Storage](/2.png)
+![Iphone Storage](./2.png)
 
 3. Kéo xuống dưới cùng `other` đó chính là dung lượng bạn cần giải phóng
 
-![Iphone Storage](/2.png)
+![Iphone Storage](./3.png)
 
 Cách triệt để nhất đó là kết nối với PC và backup lại iphone. Sau đó reset lại Iphone. Good luck!

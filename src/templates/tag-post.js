@@ -25,7 +25,7 @@ const TagPosts = ({ location, pageContext, data }) => {
               <header>
                 <h2>
                   <Link
-                    to={`/${slugify(tag.frontmatter.title)}`}
+                    to={`/blog/${slugify(tag.frontmatter.title)}`}
                     itemProp="url"
                   >
                     <span itemProp="headline">{tag.frontmatter.title}</span>

@@ -20,24 +20,28 @@ const Layout = ({ location, title, children }) => {
       </Link>
     )
   }
-  useEffect(() => {
+  const handleScroll = e => {
+    // console.log(wrap)
+    // const content = document.querySelector("#gatsby-focus-wrapper")
+    // // wrap.scrollTop = "1500px"
+    // console.log(content)
     const siteHeader = document.querySelector(".site-header")
-    window.addEventListener("scroll", e => {
-      // console.log(wrap)
-      // const content = document.querySelector("#gatsby-focus-wrapper")
-      // // wrap.scrollTop = "1500px"
-      // console.log(content)
-      const element = e.target.firstElementChild
-      if (element.scrollTop > 0) {
-        siteHeader.style.boxShadow = "0 0 2px 2px #cecece"
-        siteHeader.style.background = "white"
-      } else {
-        siteHeader.style.background = "unset"
-        siteHeader.style.boxShadow = "unset"
-      }
+    const element = e.target.firstElementChild
+    if (element.scrollTop > 0) {
+      siteHeader.style.boxShadow = "0 0 2px 2px #cecece"
+      siteHeader.style.background = "white"
+    } else {
+      siteHeader.style.background = "unset"
+      siteHeader.style.boxShadow = "unset"
+    }
 
-      console.log(element.scrollTop)
-    })
+    console.log(element.scrollTop)
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   return (

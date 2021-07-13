@@ -2,7 +2,7 @@
   content: "";
   width: 100vw;
   height: 120%;
-  clip-path: polygon(0 0, 0% 100%, 83% 0);
+  /* clip-path: polygon(0 0, 0% 100%, 83% 0); */
   background-color: var(--color-background);
   /* transform: skewX(-6deg); */
   position: absolute;

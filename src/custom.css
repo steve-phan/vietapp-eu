@@ -32,3 +32,9 @@
   display: block !important;
   visibility: visible !important;
 } */
+.MuiDrawer-paper {
+  top: 63px !important;
+}
+.global-wrapper {
+  padding-bottom: 0 !important;
+}

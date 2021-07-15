@@ -7,6 +7,7 @@ import {
   Popover,
   Typography,
 } from "@material-ui/core"
+import { useEffect } from "react"
 
 const useStyles = makeStyles(theme => {
   return {
@@ -25,8 +26,13 @@ const useStyles = makeStyles(theme => {
         backgroundColor: theme?.highlight?.color || "#fff",
       },
     },
+    // wrapDrawer: {
+    //   top: "50px !important",
+    //   backgroundColor: "red",
+    // },
     burgerLink: {
-      paddingTop: 80,
+      paddingTop: "30vh",
+      top: 50,
       width: "100vw",
       height: "100vh",
       maxWidth: 400,
@@ -39,11 +45,12 @@ const useStyles = makeStyles(theme => {
         textDecoration: "none",
         paddingTop: 6,
         paddingBottom: 6,
+        textAlign: "center",
       },
     },
     itemLink: {
-      borderTop: `2px solid  #cecece`,
-      paddingTop: "20vh !important",
+      // borderTop: `2px solid  #cecece`,
+      // paddingTop: "20vh !important",
     },
     line1: {
       transformOrigin: "top",
@@ -108,6 +115,15 @@ const Header = () => {
 
     setIsShow({ right: open })
   }
+  useEffect(() => {
+    const body = document.querySelector("body")
+    if (isShow.right) {
+      body.style.overflow = "hidden !important"
+    } else {
+      body.style.overflow = "scroll !important"
+    }
+  }, [isShow])
+
   return (
     <div className="site-header">
       <SwipeableDrawer
@@ -115,8 +131,10 @@ const Header = () => {
         open={isShow.right}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
+        className={classes.wrapDrawer}
       >
         <div className={classes.burgerLink} onClick={() => toggleDrawer(true)}>
+          <a href="https://booking.vietapp.eu">Booking-Online</a>
           <Link
             onClick={toggleDrawer(false)}
             className={classes.itemLink}
@@ -124,12 +142,12 @@ const Header = () => {
           >
             Contact
           </Link>
-          <Link onClick={toggleDrawer(false)} to="/tags">
+          {/* <Link onClick={toggleDrawer(false)} to="/tags">
             Solutions
           </Link>
           <Link onClick={toggleDrawer(false)} to="/blog">
             Prices
-          </Link>
+          </Link> */}
         </div>
       </SwipeableDrawer>
       <div className="wrap-header">
@@ -147,8 +165,7 @@ const Header = () => {
           </div>
         ) : (
           <nav>
-            <Link to="/email-marketing">Email-Marketing</Link>
-            <Link to="/tags">Booking-Online</Link>
+            <a href="https://booking.vietapp.eu">Booking-Online</a>
             <Link to="/contact">Contact</Link>
           </nav>
         )}

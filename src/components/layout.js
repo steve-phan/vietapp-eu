@@ -29,9 +29,9 @@ const Layout = ({ location, title, children }) => {
     const element = e.target.firstElementChild
     if (element.scrollTop > 0) {
       siteHeader.style.boxShadow = "0 0 2px 2px #cecece"
-      siteHeader.style.background = "white"
+      // siteHeader.style.background = "white"
     } else {
-      siteHeader.style.background = "unset"
+      // siteHeader.style.background = "white"
       siteHeader.style.boxShadow = "unset"
     }
 

@@ -86,7 +86,7 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   padding-right: 0 !important;
-  overflow: scroll !important;
+  /* overflow: scroll !important; */
 }
 
 footer {

@@ -22,7 +22,6 @@ const NotFoundPage = ({ data, location }) => {
       <Seo title="Liên hệ với chúng tôi" />
       <h4>Email:</h4>
       <p className="post-title">vietappeu@gmail.com</p>
-      <Button className={classes.root}> Primary Button</Button>
     </Layout>
   )
 }
